@@ -78,9 +78,9 @@ module RockPaperScissors
 					:cont_loose => @cont_loose,
 					:cont_win => @cont_win
 				}
-				
+
 			res = Rack::Response.new(haml("views/index.html.haml", result))
-			res.write("some_key = #{@session['some_key']}\n")
+			#res.write("some_key = #{@session['some_key']}\n")
 			res.finish
 		end #call
 	end #Clase
