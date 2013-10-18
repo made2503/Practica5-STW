@@ -1,3 +1,3 @@
-require './RockPaperScissors.rb'
+require './RockPaperScissors'
 
 ruby RockPaperScissors.rb

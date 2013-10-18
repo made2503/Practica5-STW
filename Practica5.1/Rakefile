@@ -7,6 +7,6 @@ task :server do
 end
 
 desc "Ejecutar todas las Pruebas Unitarias"
-task :test do
+task :test do 
 	sh "ruby -Ilib test/test_rps.rb"
 end
