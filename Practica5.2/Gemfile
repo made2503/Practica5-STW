@@ -6,8 +6,9 @@ group :production do
 	gem "haml"
 end
 
-group :test do
+group :development, :test do
 	gem 'rack-test'
+	gem 'rspec'
 end
 
 
