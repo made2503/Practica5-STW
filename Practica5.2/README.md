@@ -23,8 +23,14 @@ Rock, Paper and Scissors
 
 RockPaperScissors.rb
 	
-	rake spec
+	Test
 
+		rake spec
+
+	Práctica
+
+		rake
+		
 ## VISTA ##
 
 	http://localhost:8080/
