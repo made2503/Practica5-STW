@@ -8,12 +8,13 @@ Rock, Paper and Scissors
 **Paso 2.** Crearemos el arbol de directorios y ficheros de la siguiente manera:
 
 	lib
-		rsack
-			server.rb
+			rsack
+				server.rb
 		rsack.rb
+	
 	spec
-		rsack
-			server_spec.rb
+			rsack
+				server_spec.rb
 		spec_helper.rb
 
 **Paso 3.** Agregaremos los test en `server_spec.rb`
