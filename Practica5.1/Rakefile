@@ -6,8 +6,7 @@ task :server do
   sh "rackup"
 end
 
-
-desc "Pruebas Unitarias"
+desc "Ejecutar todas las Pruebas Unitarias"
 task :test do
-	sh "ruby test_rps.rb"
+	sh "ruby -Ilib test/test_rps.rb"
 end
