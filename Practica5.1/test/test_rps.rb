@@ -4,6 +4,7 @@ require "./lib/RockPaperScissors"
 
 class RPSTest < Test::Unit::TestCase
 	include Rack::Test::Methods
+	attr_reader :anwser
 
 	def app
 		Rack::Builder.new do
@@ -11,7 +12,7 @@ class RPSTest < Test::Unit::TestCase
 		end
 	end
 
-	def test_index
+	def test_home
 		get "/"
 		#puts last_response.inspect
 		assert last_response.ok?
@@ -26,6 +27,11 @@ class RPSTest < Test::Unit::TestCase
 	def test_status
 		get "/test-url", {}, {"HTTP_IF_NONE_MATCH" => '"15-xyz"'}
 		last_response.status == 200
+	end
+
+	def test_body
+		get "/"
+		assert last_response.body.include?("PLAY HERE!")
 	end
 
 	def body
