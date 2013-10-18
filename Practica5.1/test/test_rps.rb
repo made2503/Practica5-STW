@@ -19,7 +19,7 @@ class RPSTest < Test::Unit::TestCase
 
 	def test_header
 		get "/"
-		last_response.header == 'Content-Length'
+		last_response.header == 'Content-Type'
 	end
 
 
