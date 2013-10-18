@@ -3,17 +3,26 @@
 Rock, Paper and Scissors
 ================================
 
-**Paso 1.** Con la `Práctica 3` comenzaremos esta
+**Paso 1.** Con la `Práctica 4` comenzaremos esta
 
-**Paso 2.** Crearemos la carpeta `public` donde estarán todos los archivos css
+**Paso 2.** Crearemos el arbol de directorios y ficheros de la siguiente manera:
 
-**Paso 3.** Agregaremos en el archivo `index.html.haml` el css.
+	test
+		test_rps.rb
+
+**Paso 3.** Agregaremos los test en `test_rps.rb`
 
 ## EJECUCIÓN ##
 
 RockPaperScissors.rb
+
+	Test	
 	
-	rake
+		rake test
+
+	Práctica
+
+		rake
 
 ## VISTA ##
 
