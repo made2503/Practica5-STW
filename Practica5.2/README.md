@@ -1,4 +1,4 @@
-![](http://banot.etsii.ull.es/alu4103/rpss.jpg)
+![](http://banot.etsii.ull.es/alu4103/rpsss.jpg)
 
 Rock, Paper and Scissors
 ================================
