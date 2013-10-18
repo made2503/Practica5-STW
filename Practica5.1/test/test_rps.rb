@@ -32,15 +32,19 @@ class RPSTest < Test::Unit::TestCase
 		super.join
 	end
 
-	def assert_content(type)
-		assert_equal type, response.headers['Content-Type']
-	end
-
 	def empty?
 		[201,204,304,404].include? status
 	end
 
+	def assert_content(type)
+		assert_equal type, response.headers['Content-Type']
+	end
+
 	def assert_status(code)
 		assert_equal 200, response.status
+	end
+
+	def assert_body(body)
+		assert_equal body, Array.wrap(response.body).join
 	end
 end
