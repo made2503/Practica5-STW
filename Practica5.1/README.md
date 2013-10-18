@@ -17,11 +17,9 @@ Rock, Paper and Scissors
 RockPaperScissors.rb
 
 	Test	
-	
 		rake test
 
 	Práctica
-
 		rake
 
 ## VISTA ##
