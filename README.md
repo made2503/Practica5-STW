@@ -1,23 +1,11 @@
-![](http://banot.etsii.ull.es/alu4103/rpss.jpg)
+![](http://banot.etsii.ull.es/alu4103/rps.png)
 
 ROCK PAPER AND SCISSORS
 ================================
 
-**Paso 1.** Con la `Práctica 4` comenzaremos esta.
+**Práctica 5.1** Test Unitarios
 
-**Paso 2.** Crearemos la carpeta `` donde estarán todos los test
-
-**Paso 3.** 
-
-## EJECUCIÓN ##
-
-RockPaperScissors.rb
-	
-	rake
-
-## VISTA ##
-
-	http://localhost:8080/
+**Práctica 5.2** Rspec
 
 
 ## DESARROLLADOR ##
