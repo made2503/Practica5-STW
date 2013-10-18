@@ -9,8 +9,4 @@ end
 desc "Ejecutar todas las Pruebas Unitarias"
 task :test do
 	sh "ruby -Ilib test/test_rps.rb"
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> test
