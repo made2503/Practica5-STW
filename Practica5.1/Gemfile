@@ -1,8 +1,21 @@
 source 'https://rubygems.org'
 
+<<<<<<< HEAD
 group :development do
 	gem "rack"
 	gem "thin"
 end
 
 gem "haml"
+=======
+group :production do
+	gem "rack"
+	gem "thin"
+	gem "haml"
+end
+
+group :test do
+	gem 'rack-test'
+end
+
+>>>>>>> test
