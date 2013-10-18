@@ -3,9 +3,9 @@
 ROCK PAPER AND SCISSORS
 ================================
 
-**Práctica 5.1** Test Unitarios
+**Práctica 5.1** Test Unitarios / Sesión
 
-**Práctica 5.2** Rspec
+**Práctica 5.2** Rspec / Sesión
 
 
 ## DESARROLLADOR ##
