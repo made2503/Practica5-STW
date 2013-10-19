@@ -14,31 +14,23 @@
 
       .row.span2
         %h5 PLAY HERE!
-        .row.span1
-          - throws.map do |x|
-            %a{:href => "?choice=#{x}"} 
-              - if ("#{x}" == 'rock')
-                %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra2.png', :alt => 'Rock'}
-              - elsif ("#{x}" == 'paper')
-                %img{:src => 'http://banot.etsii.ull.es/alu4103/papel2.png', :alt => 'Scissors'}
-              - elsif ("#{x}" == 'scissors')
-                %img{:src => 'http://banot.etsii.ull.es/alu4103/tijeras2.png', :alt => 'Paper'}
-              - else 
-                %a{:href => '/'}
-    %center 
-      %br
-      %br
-      %form.form-inline
-        %label
-          %h5 WIN
-          %input.input-small{name: "twin", type: "text", value: "#{cont_win}"}
-        %label
-          %h5 LOOSE 
-          %input.input-small{name: "tloose", type: "text", value: "#{cont_loose}"}
-        %label
-          %h5 TIE
-          %input.input-small{name: "ttie", type: "text", value: "#{cont_tie}"}
-
+        - if (aux == 'Choose one')
+          .row.span1
+            - throws.map do |x|
+              %a{:href => "?choice=#{x}"} 
+                - if ("#{x}" == 'rock')
+                  %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra2.png', :alt => 'Rock'}
+                - elsif ("#{x}" == 'paper')
+                  %img{:src => 'http://banot.etsii.ull.es/alu4103/papel2.png', :alt => 'Scissors'}
+                - elsif ("#{x}" == 'scissors')
+                  %img{:src => 'http://banot.etsii.ull.es/alu4103/tijeras2.png', :alt => 'Paper'}
+                - else 
+                  %a{:href => '/'}
+        - else 
+          .row.span1
+            %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra2.png', :alt => 'Rock'}
+            %img{:src => 'http://banot.etsii.ull.es/alu4103/papel2.png', :alt => 'Scissors'}
+            %img{:src => 'http://banot.etsii.ull.es/alu4103/tijeras2.png', :alt => 'Paper'}
 
     .container
       %center
@@ -92,6 +84,29 @@
       %button.btn.btn-danger.btn-default 
         Try again!
         %i.icon-white.icon-thumbs-up
+
+    .row.span12 
+      %center
+        %form.form-inline
+          %br
+          %br
+          %label
+            %h5 WIN
+            %input.input-small{name: "twin", type: "text", value: "#{win}"}
+            %br
+          %label
+            %h5 LOOSE
+            %input.input-small{name: "twin", type: "text", value: "#{loose}"}
+            %br
+          %label
+            %h5 TIE
+            %input.input-small{name: "twin", type: "text", value: "#{tie}"}
+            %br
+          %label
+            %h5 PLAY
+            %input.input-small{name: "twin", type: "text", value: "#{playit}"}
+            %br
+
 
     .row.span12
       .footer

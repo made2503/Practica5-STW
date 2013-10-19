@@ -3,7 +3,7 @@ require 'rack/response'
 require 'haml'
 require 'thin'
 require 'rack'
-p "Iniciando Servidor en: http://localhost:8080"
+p "Vaya a la página http://www.rps.com:8080"
 
 module RockPaperScissors
 	class RPS
@@ -13,9 +13,6 @@ module RockPaperScissors
 			@content_type = :html
 			@defeat = {'rock' => 'scissors', 'paper' => 'rock', 'scissors' => 'paper'}
 			@throws = ''
-			@cont_win = 0
-			@cont_loose = 0
-			@cont_tie = 0
 		end
 
 		def haml(template, result)
@@ -28,13 +25,39 @@ module RockPaperScissors
 			@session = env['rack.session']
 		end
 
-		def some_key
-			return @session['some_key'].to_i if @session['some_key']
-			@session['some_key'] = 0
+		def won
+			return @session['won'].to_i if @session['won']
+			@session['won'] = 0
 		end
 
-		def some_key=(value)
-			@session['some_key'] = value
+		def won=(value)
+			@session['won'] = value
+		end
+
+		def lost
+			return @session['lost'].to_i if @session['lost']
+			@session['lost'] = 0
+		end
+
+		def lost=(value)
+			@session['lost'] = value
+		end
+
+		def tied
+			return @session['tied'].to_i if @session['tied']
+			@session['tied'] = 0
+		end
+
+		def tied=(value)
+			@session['tied'] = value
+		end
+		def play
+			return @session['play'].to_i if @session['play']
+			@session['play'] = 0
+		end
+
+		def play=(value)
+			@session['play'] = value
 		end
 
 		def call env
@@ -42,29 +65,30 @@ module RockPaperScissors
 			req = Rack::Request.new(env)
 			player_throw = req.GET["choice"]
 			@throws = @defeat.keys
-			cont_win = 0
-			cont_tie = 0
-			cont_loose = 0
-
-			self.some_key = self.some_key + 1 if req.path == '/'
 			
 			if !@throws.include?(player_throw)
 				aux = "Choose one"
 			else
 				computer_throw = @throws.sample
+				self.play= self.play + 1
 			end
      		
 			anwser = 
 				if (player_throw == computer_throw && (player_throw != '' && computer_throw != ''))
-					@cont_tie = @cont_tie + 1
 					"TIE"
 				elsif computer_throw == @defeat[player_throw]
-					@cont_win = @cont_win + 1
 					"WIN"
 				else
-					@cont_loose = @cont_loose + 1
-					"LOSE"
+					"LOOSE"
 				end
+
+			if anwser == "WIN"
+				self.won= self.won + 1
+			elsif anwser == "LOOSE"
+				self.lost= self.lost + 1
+			elsif anwser == "TIE"
+				self.tied= self.tied + 1
+			end
 
 			result =
 				{
@@ -74,9 +98,10 @@ module RockPaperScissors
 					:computer_throw => computer_throw,
 					:player_throw => player_throw,
 					:aux => aux,
-					:cont_tie => @cont_tie,
-					:cont_loose => @cont_loose,
-					:cont_win => @cont_win
+					:win => self.won,
+					:playit => self.play,
+					:loose => self.lost,
+					:tie => self.tied,
 				}
 
 			res = Rack::Response.new(haml("views/index.html.haml", result))
