@@ -1,6 +1,6 @@
 require "test/unit"
 require "rack/test"
-require "./lib/RockPaperScissors"
+require "./lib/RPS"
 
 class RPSTest < Test::Unit::TestCase
 	include Rack::Test::Methods
