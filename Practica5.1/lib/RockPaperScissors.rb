@@ -79,12 +79,12 @@ module RockPaperScissors
 				elsif computer_throw == @defeat[player_throw]
 					"WIN"
 				else
-					"LOOSE"
+					"LOSE"
 				end
 
 			if anwser == "WIN"
 				self.won= self.won + 1
-			elsif anwser == "LOOSE"
+			elsif anwser == "LOSE"
 				self.lost= self.lost + 1
 			elsif anwser == "TIE"
 				self.tied= self.tied + 1
@@ -100,7 +100,7 @@ module RockPaperScissors
 					:aux => aux,
 					:win => self.won,
 					:playit => self.play,
-					:loose => self.lost,
+					:lose => self.lost,
 					:tie => self.tied,
 				}
 
