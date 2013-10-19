@@ -19,6 +19,9 @@ Rock, Paper and Scissors
 
 **Paso 3.** Agregaremos los test en `server_spec.rb`
 
+**Paso 4.** Para las cookies y la sesión tendremos que indicar cual es el host y dominio. Y agregaremos en el fichero `RockPaperScissors.rb` las sesiones que queremos, para luego llamarlas en `index.html.haml`
+
+
 ## EJECUCIÓN ##
 
 RockPaperScissors.rb
