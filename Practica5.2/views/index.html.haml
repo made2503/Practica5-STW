@@ -26,13 +26,11 @@
                   %img{:src => 'http://banot.etsii.ull.es/alu4103/tijeras2.png', :alt => 'Paper'}
                 - else 
                   %a{:href => '/'}
-        - else
+        - else 
           .row.span1
             %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra2.png', :alt => 'Rock'}
             %img{:src => 'http://banot.etsii.ull.es/alu4103/papel2.png', :alt => 'Scissors'}
             %img{:src => 'http://banot.etsii.ull.es/alu4103/tijeras2.png', :alt => 'Paper'}
-
-
 
     .container
       %center
@@ -86,6 +84,29 @@
       %button.btn.btn-danger.btn-default 
         Try again!
         %i.icon-white.icon-thumbs-up
+
+    .row.span12 
+      %center
+        %form.form-inline
+          %br
+          %br
+          %label
+            %h5 WIN
+            %input.input-small{name: "twin", type: "text", value: "#{win}"}
+            %br
+          %label
+            %h5 LOSE
+            %input.input-small{name: "twin", type: "text", value: "#{lose}"}
+            %br
+          %label
+            %h5 TIE
+            %input.input-small{name: "twin", type: "text", value: "#{tie}"}
+            %br
+          %label
+            %h5 PLAY
+            %input.input-small{name: "twin", type: "text", value: "#{playit}"}
+            %br
+
 
     .row.span12
       .footer
