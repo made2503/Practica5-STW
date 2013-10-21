@@ -30,7 +30,7 @@ class RPSTest < Test::Unit::TestCase
 		assert_match "<h6> Madelaine Martin Pazo. </h6>", @browser.last_response.body
 	end
 
-	def test_header
+	def test_title
 		@browser.get "/"
 		assert_match "<title> RPS </title>", @browser.last_response.body
 	end
