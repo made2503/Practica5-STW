@@ -76,12 +76,14 @@ module RockPaperScissors
 			end
      		
 			anwser = 
-				if (player_throw == computer_throw && (player_throw != '' && computer_throw != ''))
-					"TIE"
-				elsif computer_throw == @defeat[player_throw]
-					"WIN"
-				else
-					"LOSE"
+				if (player_throw != nil && computer_throw != nil)
+					if (player_throw == computer_throw)
+						"TIE"
+					elsif computer_throw == @defeat[player_throw]
+						"WIN"
+					else
+						"LOSE"
+					end
 				end
 
 			if anwser == "WIN"
