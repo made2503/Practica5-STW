@@ -3,11 +3,14 @@ require 'rack/response'
 require 'haml'
 require 'thin'
 require 'rack'
+require 'sinatra'
+
+
 p "Vaya a la página http://localhost:8080"
 
 module RockPaperScissors
 	class RPS
-
+		
 		def initialize(app = nil)
 			@app = app
 			@content_type = :html

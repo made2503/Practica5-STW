@@ -4,6 +4,7 @@ group :production do
 	gem "rack"
 	gem "thin"
 	gem "haml"
+	gem "sinatra"
 end
 
 group :test do
