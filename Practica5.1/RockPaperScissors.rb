@@ -8,8 +8,7 @@ builder = Rack:: Builder.new do
 	use (Rack::Session::Cookie,
 		{:key => 'rack.session',
 		:domain => 'rps.com',
-		:secret => 'some_secret',
-		:expire_after => 30})
+		:secret => 'cookie'})
 
 	run RockPaperScissors::RPS.new
 end
