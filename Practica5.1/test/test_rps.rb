@@ -17,7 +17,7 @@ class RPSTest < Test::Unit::TestCase
 
 	def test_win
 		get"/?choice='rock'"
-		assert last_response.body.include?("WIN")
+		assert last_response.body.include?("chuchu")
 	end
 
 	def test_title
