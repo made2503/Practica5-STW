@@ -8,5 +8,5 @@ end
 
 desc "Ejecutar todas las Pruebas Unitarias"
 task :test do 
-	sh "ruby -Ilib test/test_rps.rb"
+	sh "ruby --color --format documentation -Ilib test/test_rps.rb"
 end
