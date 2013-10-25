@@ -21,6 +21,9 @@ Rock, Paper and Scissors
 
 **Paso 4.** Para las cookies y la sesión tendremos que indicar cual es el host y dominio. Y agregaremos en el fichero `RockPaperScissors.rb` las sesiones que queremos, para luego llamarlas en `index.html.haml`
 
+##IMPORTANTE##
+Para que las sesiones funcionen tiene que ir a /etc/hosts y al lado de localhost poner `wwww.rps.com`
+
 
 ## EJECUCIÓN ##
 
